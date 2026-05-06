@@ -1,0 +1,301 @@
+* {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	outline:none;
+}
+body {
+	background-color:rgb(50,50,50);
+}
+@font-face { font-family: sevenSegment; src: url('../assets/fonts/dseg.ttf'); }
+#game {
+	position:relative;
+	width:502px;
+	float:left;
+	margin:auto;
+}
+#board {
+	position:relative;
+	width:100%;
+	aspect-ratio:1/1;
+	margin:auto;
+}
+#chat {
+	border:1px solid red;
+	width:300px;
+	height: 200px;
+	float:left;
+	overflow-y:scroll;
+	margin: 10px;
+	border: 3px solid LightSkyBlue;
+}
+.poruka {
+	margin:10px;
+	padding: 10px;
+	border-radius:10px;
+	background-color: white;
+	width:200px;
+	height: auto;
+	overflow-wrap: break-word;
+}
+.poruka2 {
+	margin:10px;
+	padding: 10px;
+	border-radius:10px;
+	background-color:LightSkyBlue;
+	width:200px;
+	height: auto;
+	overflow-wrap: break-word;
+}
+#promotion {
+	width:400px;
+	height:150px;
+	background-color:rgb(50,50,50);
+	position:fixed;
+	z-index:20;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);	
+	display:none;
+
+}
+.promotion-piece {
+	width:100px;
+	height:100px;
+	display:block;
+	float:left;
+	border:16px solid rgba(255,255,255,0);
+}
+.promotion-piece:hover {
+	border:none;
+	cursor: pointer;
+}
+.tile {
+	width:10%;
+	height:10%;
+	position:absolute;
+}
+.hidden {
+	display: none;
+}
+.piece {
+	width:10%;
+	height:10%;
+	position:absolute;
+	transition: top 0.5s, left 0.5s;
+	padding: 1.5%;
+}
+.clock {
+	font-family : sevenSegment;
+	width: 90px;
+	height: 32px;
+	border: 1px solid red;
+	color: white;
+	float:right;
+	padding: 2px;
+	font-size:1.5em;
+	margin-right:10px;
+}
+#opponentClock {
+	font-size:1em;
+	margin-top:35px;
+}
+.mark-text {
+	margin:0;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size:2em;
+}
+.mark {
+	/*background-image: url('../assets/png/foa.png');*/
+	background-color:LightSkyBlue;
+}
+#server-stats {
+	color: white;
+	border: 1px solid white;
+	/*position:fixed;
+	bottom: 0;
+	left: 0;*/
+}
+.icon {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin-left: 5px;
+	padding: 3px;
+}
+.icon:hover {
+	padding: 0;
+	cursor:pointer;
+}
+.center {
+	float: left;
+	margin-left:calc((100% - 192px) / 2);
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+#newGamePanel, #gameEndPanel, #resignPanel, #drawPanel, #declinePanel, #rematchPanel, #declineRematchPanel {
+	width: 240px;
+	height: 220x;
+	padding: 10px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border:3px solid LightSkyBlue;
+	background-color:rgb(50,50,50);
+	display:none;
+}
+#colorContainer {
+	margin: 10px auto;
+}
+#colorContainer::after, .x-icon-frame::after, .playerInfo::after, .controls::after, #mainContainer::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.smallContainer {
+	width: 64px;
+	height: 64px;
+}
+.newGameIconColor {
+	width: 64px;
+	height: 64px;
+	border: 10px solid rgba(255,255,255,0);
+}
+.newGameIconColor:hover {
+	border:none;
+	cursor:pointer;
+}
+.x-icon {
+	float:right;
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+}
+.x-icon:hover {
+	color:red;;
+}
+.x-icon-frame {
+	margin-bottom:10px;
+}
+.title-small {
+	text-align:center;
+	margin: 10px 0;
+	border-top:1px solid grey;
+	border-bottom:1px solid grey;
+	color: white;
+}
+.button {
+	padding:10px;
+	border:3px solid LightSkyBlue;
+	cursor:pointer;
+	color: white;
+	background-color:rgb(50,50,50);
+	box-shadow:3px 3px 3px gray;
+	position:relative;
+	transition: background-color 0.25s linear;
+}
+.back:hover {
+	background-color:tomato;
+}
+.confirm-button:hover {
+	background-color:LightSeaGreen;
+}
+.centriran-tekst{
+	position:absolute;
+	top:50%;
+	left:65px;
+	transform: translateY(-50%);
+	width:220px;
+}
+.playerInfo {
+	position:relative;
+	color:white;
+	font-size:1.5em;
+}
+.playerInfoImage {
+	float:left;
+	margin:10px;
+	width:48px;
+	height:48px;
+	border-radius:50%;
+}
+#id {
+	display:none;
+}
+.controls {
+	margin:10px 0;
+}
+.button-controls {
+	margin-left: 10px;
+	padding:5px;
+	border:3px solid LightSkyBlue;
+	cursor:pointer;
+	color: white;
+	background-color:rgb(50,50,50);
+	box-shadow:3px 3px 3px gray;
+	position:relative;
+	transition: background-color 0.25s linear;
+}
+#msg {
+	height:32px;
+	padding:5px;
+	float:left;
+	width: 150px;
+	border:3px solid LightSkyBlue;
+	margin-left: 5px;
+	display: none;
+}
+#opponentInfo {
+	display:none;
+}
+@media screen and (max-width: 600px) {
+.icon {
+	width: 20px;
+	height: 20px;
+	margin-left: 3px;
+	padding: 3px;
+}
+.clock {
+	height:20px;
+	font-size:0.75em;
+	width: 50px;
+}
+#msg {
+	width:100px;
+	height: 20px;
+}
+#opponentClock {
+	font-size:0.5em;
+}
+#newGame {
+	height:20px;
+	padding:0;
+}
+#game {
+	width:100%;
+}
+#board {
+	width:100%;
+}
+#chat {
+	float:none;
+	margin:auto;
+}
+#promotion {
+	width: 256px;
+}
+.promotion-piece {
+	width: 64px;
+	height: 64px;
+}
+}

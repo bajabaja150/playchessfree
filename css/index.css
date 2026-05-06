@@ -1,0 +1,252 @@
+* {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	outline:none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	background-color:rgb(50,50,50);
+	color: white;
+	padding-bottom: 200px;
+}
+.logo {
+	display:block;
+	margin:auto;
+	width:150px;
+	height: 150px;
+}
+.title {
+	text-align:center;
+	margin: 10px 0;
+}
+.title-small {
+	text-align:center;
+	margin: 10px 0;
+	border-top:1px solid grey;
+	border-bottom:1px solid grey;
+}
+#recent-logins {
+	margin: 10px 0;
+}
+.form {
+	padding:30px;
+	border:5px solid LightSkyBlue;
+	width:500px;
+	margin:auto;
+	position:relative;
+	top:100px;
+	border-radius: 25px;
+}
+#login-form {
+	top:0;
+	opacity:0;
+	transition: top 1s ease-in, opacity 1s ease-in;
+}
+@media screen and (max-width: 600px) {
+  .form {
+		width: 100%;
+	}
+	.title {
+		font-size: 1.5em;
+	}
+}
+.icon {
+	float: left;
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+	background-color:white;
+	color:rgb(50,50,50);
+}
+.ikona-prijava {
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+	float:right;
+	display:none;
+	margin:14px 5px;
+}
+.warning-icon {
+	float: left;
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+	color:red;
+	display:none;
+	background-color: white;
+}
+.ikona-prijava:hover {
+	color:red;
+}
+.frame {
+	border:3px solid LightSkyBlue;
+	margin-bottom:10px;
+	position:relative;
+}
+#nedavne-prijave {
+	margin-bottom:10px;
+}
+.prijava {
+	border:3px solid white;
+	margin:10px 0;
+	position:relative;
+	cursor:pointer;
+}
+.prijava:hover {
+	background-image: linear-gradient(to right, rgb(50,50,50) , LightSkyBlue);
+}
+.aktivna-prijava {
+	border:3px solid LightSkyBlue;
+	margin:10px 0;
+	position:relative;
+	cursor:pointer;
+	background-color:LightSkyBlue;
+}
+.one-icon-field {
+	height:40px;
+	padding:10px;
+	float:left;
+	width: calc(100% - 40px);
+	border:none;
+}
+.two-icons-field {
+	height:40px;
+	padding:10px;
+	float:left;
+	width: calc(100% - 80px);
+	border:none;
+}
+#registration-form, #password-change-form, #my-photo {
+	display:none;
+}
+.width100 {
+	width:100%;
+}
+#remember-frame {
+	margin-bottom:10px;
+	position:relative;
+}
+#remember {
+	position:absolute;
+	top:50%;
+	left:3px;
+	transform:translateY(-50%) scale(1.5);
+}
+#remember-label {
+	display:inline;
+	margin-left:23px;
+}
+.button {
+	padding:10px;
+	border:3px solid LightSkyBlue;
+	cursor:pointer;
+	/*background-image:linear-gradient(white,lightgray);*/
+	color: white;
+	background-color:rgb(50,50,50);
+	box-shadow:3px 3px 3px gray;
+	position:relative;
+	transition: background-color 0.25s linear;
+}
+.button:hover {
+	color:white;
+	background-image:none;
+}
+#login, #change-password {
+	margin-bottom:10px;
+}
+#reg:hover {
+	background-color:LightSkyBlue;
+}
+.x-icon {
+	float:right;
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+}
+.x-icon:hover {
+	color:red;;
+}
+#my-photo-remove {
+	float:right;
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+	display:none;
+	background-color:white;
+	color:black;
+}
+#my-photo-remove:hover {
+	color:red;
+}
+.x-icon-frame {
+	margin-bottom:10px;
+}
+.frame::after, .x-icon-frame::after, .prijava::after, .aktivna-prijava::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.back:hover {
+	background-color:tomato;
+}
+.confirm-button:hover {
+	background-color:LightSeaGreen;
+}
+.warning-message {
+	color:red;
+	margin-bottom:10px;
+	display:none;
+}
+.info-message{
+	color:LightSeaGreen;
+	margin-bottom:10px;
+	display:none;
+}
+.right {
+	float:right;
+}
+.left {
+	float:left;
+}
+#profile-photo {
+	border:3px solid LightSkyBlue;
+	border-radius:50%;
+	width:128px;
+	height:128px;
+	margin:auto;
+	display:none
+}
+#my-photo-filename {
+	width:calc(100% - 40px);
+	height:40px;
+	float:left;
+	line-height:40px;
+	cursor:pointer;
+	background-color: white;
+	color:black;
+}
+.centriran-tekst{
+	position:absolute;
+	top:50%;
+	left:65px;
+	transform: translateY(-50%);
+	width:220px;
+}
+.slika-prijava {
+	float:left;
+	margin:10px;
+	width:48px;
+	height:48px;
+	border-radius:50%;
+}
